@@ -36,7 +36,7 @@ steps:
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
       cat pemfile|openssl aes-256-cbc -d -a -pass pass:${pem_key}>key_file
-      echo "private_key_path = key_file" > terraform.tfvars
+      echo 'private_key_path = "./key_file"' > terraform.tfvars
       echo 'region="'${region}'"' >>terraform.tfvars
       echo 'tenancy_ocid="'${tenancy_ocid}'"' >>terraform.tfvars
       echo 'user_ocid="'${user_ocid}'"' >>terraform.tfvars
@@ -54,7 +54,7 @@ steps:
       
 
   - type: Command
-    name: "Terraform init"
+    name: "Terraform actions"
     timeoutInSeconds: 40
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
