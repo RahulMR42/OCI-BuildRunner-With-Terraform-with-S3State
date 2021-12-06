@@ -1,6 +1,6 @@
 variable region {
   type        = string
-  default     = ""
+  default     = "us-ashburn-1"
   description = "OCI region"
 }
 
