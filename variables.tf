@@ -22,7 +22,7 @@ default = ""
 }
 
 
-}
+
 variable private_key_path{
 default = ""
 }
