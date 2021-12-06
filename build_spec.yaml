@@ -48,9 +48,9 @@ steps:
     timeoutInSeconds: 40
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
-      echo "[default]" > backend_credentials
-      echo 'aws_access_key_id="'${aws_access_key_id}'"''>>backend_credentials
-      echo 'aws_secret_access_key="'${aws_secret_access_key}'"''>>backend_credentials
+      echo "[default]" > cred_store
+      echo "aws_access_key_id=${aws_access_key_id}">>cred_store
+      echo "aws_secret_access_key="'${aws_secret_access_key}">>cred_store
       
 
   - type: Command
@@ -64,5 +64,5 @@ steps:
       cat key_file
       cat backend_credentials
       terraform init -migrate-state
-      terraform plan -out=plan.out
-      terraform apply plan.out      
+      terraform plan 
+      terraform apply -auto-approve      

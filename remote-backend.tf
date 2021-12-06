@@ -1,10 +1,10 @@
 terraform {
   backend "s3" {
     bucket   = "terraform-backend"
-    key      = "networking/terraform.tfstate"
+    key      = "demo/terraform.tfstate"
     region   = "us-ashburn-1"
     endpoint = "https://fahdabidiroottenancy.compat.objectstorage.us-ashburn-1.oraclecloud.com"
-    shared_credentials_file     = "backend_credentials"
+    shared_credentials_file     = "cred_store"
     skip_region_validation      = true
     skip_credentials_validation = true
     skip_metadata_api_check     = true
