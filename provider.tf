@@ -1,3 +1,3 @@
 provider "oci" {
-  auth = "InstancePrincipal"
+ 
 }
