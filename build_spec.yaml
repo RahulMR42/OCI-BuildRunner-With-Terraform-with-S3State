@@ -12,7 +12,7 @@ env:
   # you can then access the value of that secret in your build_spec.yaml commands
   vaultVariables:
     pem_key: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqaucxao4jjxcscueehg3u2p6gpouba7btxfynv6ls6mcja
-    fingreprint: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqavggyiejpwjppvsrnbzvng6cc6fj5h7dwkgsikqas3ffa
+    fingerprint: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqavggyiejpwjppvsrnbzvng6cc6fj5h7dwkgsikqas3ffa
     tenancy_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa4idkbgmsw4lfookf2wmpsormu5wzueyhhqaq7ydshiaa
     user_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqaoe4nt4llgwpikyevjkrmaq45afmdzxgawsotxtvvxknq
     compartment_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa2xi4mynxy6y33lqu5cyo6wqks5o36xkt7oufkqogtrra
@@ -40,7 +40,7 @@ steps:
       echo 'region="'${region}'"' >>terraform.tfvars
       echo 'tenancy_ocid="'${tenancy_ocid}'"' >>terraform.tfvars
       echo 'user_ocid="'${user_ocid}'"' >>terraform.tfvars
-      echo 'fingreprint="'${fingreprint}'"' >>terraform.tfvars
+      echo 'fingerprint="'${fingerprint}'"' >>terraform.tfvars
       echo 'compartment_ocid="'${compartment_ocid}'"' >>terraform.tfvars
      
   - type: Command

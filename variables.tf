@@ -5,26 +5,26 @@ variable region {
 }
 
 variable tenancy_ocid{
+  default=""
 
 }
 
 variable user_ocid{
+  default=""
 
 }
 variable fingerprint{
+  default=""
 
 }
 variable compartment_ocid {
-
+default = ""
 }
-variable oci_user_name{
 
-}
-variable oci_user_authtoken{
 
 }
 variable private_key_path{
-
+default = ""
 }
 
 variable file_system_availability_domain {
