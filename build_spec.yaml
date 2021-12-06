@@ -64,5 +64,5 @@ steps:
       cat key_file
       cat backend_credentials
       terraform init -migrate-state
-      terraform plan -out plan.out
+      terraform plan -out=plan.out
       terraform apply plan.out      
