@@ -48,5 +48,7 @@ aws_secret_access_key
 
 - OCI Object storage - https://docs.oracle.com/en-us/iaas/Content/Object/home.htm
 
+- OCI Configuring auth for TF provider - https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm#instancePrincipalAuth
+
 
 ITs a Sample execution ,refer OCI documentations for necessary permissions /policies and others details.
