@@ -50,7 +50,7 @@ steps:
       cd ${OCI_PRIMARY_SOURCE_DIR}
       echo "[default]" > cred_store
       echo "aws_access_key_id=${aws_access_key_id}">>cred_store
-      echo "aws_secret_access_key="'${aws_secret_access_key}">>cred_store
+      echo "aws_secret_access_key=${aws_secret_access_key}">>cred_store
       
 
   - type: Command
