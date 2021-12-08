@@ -48,10 +48,9 @@ steps:
       export TF_VAR_user_ocid=${user_ocid}
       export TF_VAR_fingerprint=${fingerprint}
       export TF_VAR_private_key_path="key_file" 
-      echo ${delegation_token} >delegation_token
       export OCI_use_obo_token=true
       export OCI_AUTH=InstancePrincipal
-      export OCI_obo_token=$(cat delegation_token) 
+      export OCI_obo_token=$(delegation_token) 
       
 
   - type: Command
