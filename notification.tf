@@ -6,7 +6,7 @@ resource "random_string" "deploy_id" {
 resource "oci_ons_notification_topic" "oci_ons_notification_topic" {
     #Required
     compartment_id = var.compartment_ocid
-    name = "var.notification_topic_name_${random_string.deploy_id.result}"
+    name = "test1" # "var.notification_topic_name_${random_string.deploy_id.result}"
     description = var.notification_topic_description
 
 }
