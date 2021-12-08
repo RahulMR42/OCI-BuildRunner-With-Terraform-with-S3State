@@ -49,7 +49,6 @@ steps:
       export TF_VAR_fingerprint=${fingerprint}
       export TF_VAR_private_key_path="key_file" 
       export OCI_use_obo_token=true
-      export OCI_AUTH=InstancePrincipal
       export OCI_obo_token=$(delegation_token) 
       
 
