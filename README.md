@@ -24,11 +24,6 @@ $ cat actual_pemfile |openssl aes-256-cbc -a -salt -pass pass:<Your pem_key> >
 - Declare the below variables to OCI vault as secrets
 
 ```
-pem_key
-fingreprint
-tenancy_ocid
-user_ocid
-compartment_ocid
 aws_access_key_id
 aws_secret_access_key
 ```
