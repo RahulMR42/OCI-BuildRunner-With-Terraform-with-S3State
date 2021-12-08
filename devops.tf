@@ -8,3 +8,7 @@ resource "oci_logging_log_group" "test_log_group" {
   display_name   = "${var.app_name}_${random_string.deploy_id.result}_log_group"
   
 }
+
+output "test_log_group"{
+  value = oci_logging_log_group.test_log_group
+}
