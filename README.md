@@ -27,7 +27,7 @@ aws_secret_access_key
 - Fill the correct OCID values of secrets in toe build_spec.yaml.
 - Update variables.tf according to the OCI region selected.
 - Create a build pipeline and create a manage build 
-- Its a sample execution with a notification topic.
+- Its a sample execution with a test log group.
 
 🗨️ References
 

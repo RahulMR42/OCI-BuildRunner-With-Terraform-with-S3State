@@ -58,4 +58,4 @@ steps:
       terraform version
       terraform init -migrate-state
       terraform plan 
-      terraform apply -auto-approve      
+      terraform apply -auto-approve -no-color     
