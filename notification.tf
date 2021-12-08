@@ -12,5 +12,6 @@ resource "oci_ons_notification_topic" "oci_ons_notification_topic" {
 }
 
 output "notifcation_details"{
-  value = oci_ons_notification_topic.oci_ons_notification_topic
+  # value = oci_ons_notification_topic.oci_ons_notification_topic
+  value = random_string.deploy_id
 }
