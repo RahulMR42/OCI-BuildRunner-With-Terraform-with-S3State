@@ -11,6 +11,10 @@ env:
   # the value of a vaultVariable is the secret-id (in OCI ID format) stored in the OCI Vault service
   # you can then access the value of that secret in your build_spec.yaml commands
   vaultVariables:
+    pem_key: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqaucxao4jjxcscueehg3u2p6gpouba7btxfynv6ls6mcja
+    fingerprint: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqavggyiejpwjppvsrnbzvng6cc6fj5h7dwkgsikqas3ffa
+    tenancy_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa4idkbgmsw4lfookf2wmpsormu5wzueyhhqaq7ydshiaa
+    user_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqaoe4nt4llgwpikyevjkrmaq45afmdzxgawsotxtvvxknq
     compartment_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa2xi4mynxy6y33lqu5cyo6wqks5o36xkt7oufkqogtrra
     aws_access_key_id: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa5l27shvyb7ms64ljkoz4ltqi6nffcu3pum7kzxk6yyua
     aws_secret_access_key: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqam4o444cma2o4ctakeujwwgvpnaveuv3zkienfrhxqp6a
@@ -27,7 +31,7 @@ steps:
       yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
       yum -y install terraform
 
-     
+       
   - type: Command
     name: "OCI Terraform S3 backend setup"
     timeoutInSeconds: 40
@@ -38,6 +42,11 @@ steps:
       echo "aws_secret_access_key=${aws_secret_access_key}">>cred_store
       cat cred_store
       export TF_VAR_compartment_ocid=${compartment_ocid}
+      cat pemfile|openssl aes-256-cbc -d -a -pass pass:${pem_key}>key_file
+      export TF_VAR_tenancy_ocid=${tenancy_ocid}
+      export TF_VAR_user_ocid=${user_ocid}
+      export TF_VAR_fingerprint=${fingerprint}
+      export TF_VAR_private_key_path="key_file" 
       
 
   - type: Command
