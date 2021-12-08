@@ -32,4 +32,5 @@ terraform.tfvars
 _*.*
 backend_credentials
 .terraform*
+cred_store
 
