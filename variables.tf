@@ -12,4 +12,8 @@ variable notification_topic_name {
   default = "sample-topic"
 }
 
+variable notification_topic_description {
+  default = "Test notification topic from build runner /tf "
+}
+
 
