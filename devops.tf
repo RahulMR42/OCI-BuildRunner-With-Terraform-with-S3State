@@ -14,7 +14,6 @@ resource "random_string" "deploy_id" {
 # }
 
 resource "oci_identity_dynamic_group" "devops_build_dg" {
-  provider       = oci.home_region
   name           = "MyDynamicGroup"
   description    = "DevOps repository build pipeline dynamic group"
   compartment_id = var.compartment_ocid
