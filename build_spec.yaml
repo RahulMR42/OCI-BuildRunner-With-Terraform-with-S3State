@@ -47,15 +47,16 @@ steps:
       export TF_VAR_user_ocid=${user_ocid}
       export TF_VAR_fingerprint=${fingerprint}
       export TF_VAR_private_key_path="key_file" 
+      cat /etc/oci/delegation_token 
       
 
-  - type: Command
-    name: "Terraform actions"
-    timeoutInSeconds: 40
-    command: |
-      cd ${OCI_PRIMARY_SOURCE_DIR}
-      ls -ltr
-      terraform version
-      terraform init -migrate-state
-      terraform plan 
-      terraform apply -auto-approve -no-color     
+  # - type: Command
+  #   name: "Terraform actions"
+  #   timeoutInSeconds: 40
+  #   command: |
+  #     cd ${OCI_PRIMARY_SOURCE_DIR}
+  #     ls -ltr
+  #     terraform version
+  #     terraform init -migrate-state
+  #     terraform plan 
+  #     terraform apply -auto-approve -no-color     
