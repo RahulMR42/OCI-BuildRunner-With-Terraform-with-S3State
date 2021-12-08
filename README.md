@@ -22,6 +22,9 @@ $ git clone https://github.com/RahulMR42/oci-build-with-terraform
 ```
 aws_access_key_id
 aws_secret_access_key
+tenancy_ocid
+delegation_token
+compartment_ocid
 ```
 
 - Fill the correct OCID values of secrets in toe build_spec.yaml.
