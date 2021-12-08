@@ -9,7 +9,7 @@ default = "ocid1.compartment.oc1..aaaaaaaalbagydl2powatrvczfdfempy5z5j7g7kjm3gp6
 }
 
 variable notification_topic_name {
-  default = "sample-topic"
+  default = "topic"
 }
 
 variable notification_topic_description {
