@@ -5,7 +5,7 @@ variable region {
 }
 
 variable compartment_ocid {
-default = "ocid1.compartment.oc1..aaaaaaaalbagydl2powatrvczfdfempy5z5j7g7kjm3gp6lkuk2odvvsrvdq"
+default = "ocid1.tenancy.oc1..aaaaaaaasu7rvefmsyk5kqczfmdqi5clpddejfjk2attdqnk6sbk72wajq5q"
 }
 
 variable app_name {

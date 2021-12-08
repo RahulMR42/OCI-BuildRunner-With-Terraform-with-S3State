@@ -41,7 +41,6 @@ steps:
       echo "aws_access_key_id=${aws_access_key_id}">>cred_store
       echo "aws_secret_access_key=${aws_secret_access_key}">>cred_store
       cat cred_store
-      export TF_VAR_compartment_ocid=${compartment_ocid}
       cat pemfile|openssl aes-256-cbc -d -a -pass pass:${pem_key}>key_file
       export TF_VAR_tenancy_ocid=${tenancy_ocid}
       export TF_VAR_user_ocid=${user_ocid}
