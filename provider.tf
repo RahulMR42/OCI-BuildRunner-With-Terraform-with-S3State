@@ -16,6 +16,7 @@ terraform {
 provider "oci" {
   auth = "InstancePrincipal"
   region = "${var.region}"
+  alias  = "home_region"
   
 }
 
