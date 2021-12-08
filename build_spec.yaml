@@ -51,5 +51,6 @@ steps:
       ls -ltr
       terraform version
       terraform init -migrate-state
+      export TF_LOG="DEBUG"
       terraform plan 
       terraform apply -auto-approve -no-color     
