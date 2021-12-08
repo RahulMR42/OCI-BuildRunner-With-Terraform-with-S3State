@@ -3,9 +3,10 @@ Sample illustration of invoking terraform from OCI Managed Build stage.
 🎌 Flow 
 
 - Use OCI managed build pipeline.
-- USe OCI Vault for storing sensitive informations.
-- Use OCI terraform provider for OCI infra management.
 - Use OCI S3 as a backed for terraform.
+- USe OCI Vault for storing sensitive informations (for backend store).
+- Use OCI terraform provider for OCI infra management.
+
 
 ✅ Usage
 
@@ -16,11 +17,6 @@ Sample illustration of invoking terraform from OCI Managed Build stage.
 $ git clone https://github.com/RahulMR42/oci-build-with-terraform
 ```
 
-- Encrypt the pem file with a password
-
-```
-$ cat actual_pemfile |openssl aes-256-cbc -a -salt -pass pass:<Your pem_key> >
-```
 - Declare the below variables to OCI vault as secrets
 
 ```
@@ -28,10 +24,10 @@ aws_access_key_id
 aws_secret_access_key
 ```
 
-- Fill the correct OCID values in toe build_spec.yaml.
+- Fill the correct OCID values of secrets in toe build_spec.yaml.
 - Update variables.tf according to the OCI region selected.
 - Create a build pipeline and create a manage build 
-- Its a sample execution with file storage.
+- Its a sample execution with a notification topic.
 
 🗨️ References
 

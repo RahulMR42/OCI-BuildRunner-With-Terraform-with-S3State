@@ -14,5 +14,5 @@ resource "oci_ons_notification_topic" "oci_ons_notification_topic" {
 }
 
 output "notifcation_details"{
-  vaule = oci_ons_notification_topic.oci_ons_notification_topic
+  value = oci_ons_notification_topic.oci_ons_notification_topic
 }
