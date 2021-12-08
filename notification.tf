@@ -4,7 +4,7 @@ resource "random_id" "tag" {
 
 resource "oci_ons_notification_topic" "oci_ons_notification_topic" {
     #Required
-    compartment_id = var.compartment_id
+    compartment_id = var.compartment_ocid
     name = "var.notification_topic_name-${random_id.tag.hex}"
 
     #Optional
