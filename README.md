@@ -14,7 +14,7 @@ Sample illustration of invoking terraform from OCI Managed Build stage.
 - Clone the repo to your local laptop.
 
 ```
-$ git clone https://github.com/RahulMR42/oci-build-with-terraform
+$ git clone https://github.com/RahulMR42/OCI-BuildRunner-With-Terraform-with-S3State
 ```
 
 - Declare the below variables to OCI vault as secrets
