@@ -15,7 +15,9 @@ env:
     compartment_ocid: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa2xi4mynxy6y33lqu5cyo6wqks5o36xkt7oufkqogtrra
     aws_access_key_id: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqa5l27shvyb7ms64ljkoz4ltqi6nffcu3pum7kzxk6yyua
     aws_secret_access_key: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqam4o444cma2o4ctakeujwwgvpnaveuv3zkienfrhxqp6a
-     
+    delegation_token: ocid1.vaultsecret.oc1.iad.amaaaaaak56z2vqamq6lytfyn55wudcuosqn3nry34hq57dqpgihttsuy3ua
+    
+ 
 
 steps:
   - type: Command
@@ -45,7 +47,7 @@ steps:
       cd ${OCI_PRIMARY_SOURCE_DIR}
       export OCI_use_obo_token=true
       export OCI_AUTH=InstancePrincipal
-      export OCI_obo_token=${OCI_RESOURCE_PRINCIPAL_RPST}
+      export OCI_obo_token=${delegation_token}
       terraform init -migrate-state
       terraform plan 
       terraform apply -auto-approve -no-color

@@ -23,6 +23,7 @@ $ git clone https://github.com/RahulMR42/OCI-BuildRunner-With-Terraform-with-S3S
 aws_access_key_id
 aws_secret_access_key
 tenancy_ocid
+delegation_token
 compartment_ocid
 ```
 
