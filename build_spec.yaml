@@ -37,5 +37,9 @@ steps:
       echo "[default]" > cred_store
       echo "aws_access_key_id=${aws_access_key_id}">>cred_store
       echo "aws_secret_access_key=${aws_secret_access_key}">>cred_store
-      oci iam availability-domain list
+      oci iam availability-domain list --compartment-id ${compartment_ocid}
+      terraform init -migrate-state
+      export TF_LOG="DEBUG"
+      terraform plan 
+      terraform apply -auto-approve -no-color     
       
