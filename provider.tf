@@ -17,7 +17,6 @@ provider "oci" {
   tenancy_ocid     = var.tenancy_ocid
   alias        = "home_region"
   region = "${var.region}"
-  # auth = "InstancePrincipal"
-   
+    
 }
 
