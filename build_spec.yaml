@@ -40,9 +40,8 @@ steps:
       oci iam availability-domain list --compartment-id ${compartment_ocid} 
       export OCI_use_obo_token=true
       export OCI_AUTH=InstancePrincipal
-      export OCI_obo_token=${delegation_token_from_vault}
-      echo $delegation_token
-      
+      export OCI_obo_token=${delegation_token}
+            
   - type: Command
     name: "Terraform Config"
     timeoutInSeconds: 40
