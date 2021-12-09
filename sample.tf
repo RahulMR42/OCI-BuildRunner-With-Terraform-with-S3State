@@ -1,5 +1,5 @@
 resource "random_string" "deploy_id" {
-  length  = 2
+  length  = 4
   special = false
 }
 
