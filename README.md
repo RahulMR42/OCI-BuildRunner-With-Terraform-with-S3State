@@ -30,7 +30,17 @@ compartment_ocid
 - Fill the correct OCID values of secrets in toe build_spec.yaml.
 - Update variables.tf according to the OCI region selected.
 - Create a build pipeline and create a manage build 
-- Its a sample execution with a test log group.
+- Its a sample execution with a test dynamic  group.
+
+Output references
+-----
+- Build stage steps.
+
+![](images/build_steps.png)
+
+- Sate file refernces (via OCI Object Storage)
+
+![](images/state_store.png)
 
 🗨️ References
 
@@ -45,4 +55,4 @@ compartment_ocid
 - OCI Configuring auth for TF provider - https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm#instancePrincipalAuth
 
 
-ITs a Sample execution ,refer OCI documentations for necessary permissions /policies and others details.
+Its a Sample execution ,refer OCI documentations for necessary permissions /policies and others details.

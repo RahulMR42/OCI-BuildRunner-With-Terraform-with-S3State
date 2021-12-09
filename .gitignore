@@ -33,4 +33,5 @@ _*.*
 backend_credentials
 .terraform*
 cred_store
+.DS*
 
