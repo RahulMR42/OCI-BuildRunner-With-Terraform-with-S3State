@@ -47,7 +47,7 @@ steps:
       cd ${OCI_PRIMARY_SOURCE_DIR}
       export OCI_use_obo_token=true
       export OCI_AUTH=InstancePrincipal
-      toekn_from_oci=$(oci iam auth-token create --description "for_tf" --user-id $)
+      
       export OCI_obo_token="byQ)n8e-_2IWaqQW]-QI"
       terraform init -migrate-state
       terraform plan 
