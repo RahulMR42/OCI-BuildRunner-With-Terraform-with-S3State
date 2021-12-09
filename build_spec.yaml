@@ -40,10 +40,10 @@ steps:
       oci iam availability-domain list --compartment-id ${compartment_ocid} 
       export OCI_use_obo_token=true
       export OCI_AUTH=InstancePrincipal
-      export OCI_obo_token=${delegation_token}
+      export OCI_obo_token=${delegation_token_from_vault}
             
   - type: Command
-    name: "Terraform Config"
+    name: "Terraform Action"
     timeoutInSeconds: 40
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
