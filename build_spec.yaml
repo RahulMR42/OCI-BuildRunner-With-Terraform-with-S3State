@@ -47,7 +47,7 @@ steps:
       cd ${OCI_PRIMARY_SOURCE_DIR}
       export OCI_use_obo_token=true
       export OCI_AUTH=InstancePrincipal
-      export OCI_obo_token=${delegation_token}
+      export OCI_obo_token=${OCI_RESOURCE_PRINCIPAL_RPST}
       terraform init -migrate-state
       terraform plan 
       terraform apply -auto-approve -no-color
