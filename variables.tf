@@ -13,7 +13,7 @@ default = "ocid1.tenancy.oc1..aaaaaaaasu7rvefmsyk5kqczfmdqi5clpddejfjk2attdqnk6s
 }
 
 variable app_name {
-  default = "sample"
+  default = "testApp"
 }
 
 
