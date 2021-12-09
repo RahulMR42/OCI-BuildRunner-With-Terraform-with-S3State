@@ -38,10 +38,11 @@ steps:
       echo "aws_access_key_id=${aws_access_key_id}">>cred_store
       echo "aws_secret_access_key=${aws_secret_access_key}">>cred_store
       oci iam availability-domain list --compartment-id ${compartment_ocid}
-      echo $OCI_CLI_PROFILE
-      env 
-      set
-      # terraform init -migrate-state
-      # terraform plan 
-      # terraform apply -auto-approve -no-color     
+      echo $delegation_token
+      export OCI_use_obo_token=true
+      export OCI_AUTH=InstancePrincipal
+      export OCI_obo_token=${delegation_token}
+      terraform init -migrate-state
+      terraform plan 
+      terraform apply -auto-approve -no-color     
       
